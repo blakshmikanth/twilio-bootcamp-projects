@@ -9,5 +9,9 @@
     <PackageReference Include="Twilio.AspNet.Core" Version="5.73.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="README.md" />
+  </ItemGroup>
+
 
 </Project>
