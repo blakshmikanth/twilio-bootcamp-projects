@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1 class="display-4">Welcome </h1>
+
+    <div class="my-3 p-3 border border-secondary border-1">
+        <form method="post" action="/home/index">
+            <div class="row align-items-center my-3">
+                <div class="col-3">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" value=""/>
+                </div>
+            </div>
+
+            <div class="my-3 col-3 offset-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="my-3 py-3">
+        @if (ViewBag.response != null)
+        {
+            <p>Results: @ViewBag.response.PhoneNumber </p>    
+        }
+        
+    </div>
+
+</div>
