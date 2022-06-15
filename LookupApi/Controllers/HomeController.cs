@@ -36,7 +36,7 @@ public class HomeController : Controller
         ViewBag.response = response;
         return View();
     }
-
+    
 
     public IActionResult Privacy()
     {

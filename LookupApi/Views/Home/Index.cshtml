@@ -3,31 +3,36 @@
 }
 
 <div>
-    <h1 class="display-4">Welcome </h1>
+    <h4>Lookup Api </h4>
+    <hr>
+    <p>
+        Lookup allows you to systematically ascertain information about phone numbers.
+        With Lookup, you can identify local-friendly number formats and reduce the
+        likelihood of undelivered messages.
+    </p>
 
-    <div class="my-3 p-3 border border-secondary border-1">
+    <div class="my-3 p-3 border border-1">
         <form method="post" action="/home/index">
             <div class="row align-items-center my-3">
-                <div class="col-3">
+                <div class="col-2">
                     <label for="phoneNumber" class="form-label">Phone Number</label>
                 </div>
-                <div class="col-6">
+                <div class="col-3">
                     <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" value=""/>
                 </div>
-            </div>
-
-            <div class="my-3 col-3 offset-3">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
             </div>
         </form>
     </div>
-    
+
     <div class="my-3 py-3">
         @if (ViewBag.response != null)
         {
-            <p>Results: @ViewBag.response.PhoneNumber </p>    
+            <p>Results: @ViewBag.response.PhoneNumber </p>
         }
-        
+
     </div>
 
 </div>
